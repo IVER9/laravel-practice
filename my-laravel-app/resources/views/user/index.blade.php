@@ -1,4 +1,3 @@
-<?php var_dump($users) ?>
 <!DOCTYPE html>
 <html lang="ja">
     <head>
@@ -7,10 +6,25 @@
     </head>
     <body>
         <h1>USERLIST</h1>
-        <ul>
+        <table border="3">
+            <tr>
+                <th>id</th>
+                <th>name</th>
+                <th>email</th>
+            </tr>
             @foreach($users as $user)
-            <li>$user</li>
+                <tr>
+                    <td>
+                        {{ $user['id'] }}
+                    </td>
+                    <td>
+                        {{ $user['name'] }}
+                    </td>
+                    <td>
+                        {{ $user['email'] }}
+                    </td>
+                </tr>
             @endforeach
-        </ul>
+        </table>
     </body>
 </html>
