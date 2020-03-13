@@ -11,7 +11,6 @@
 |
 */
 // Route::get('user/{id}', 'ShowProfile');
-Route::get('/', 'UserController@index');
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::get('/', 'TodoController@index');
+Route::get('/todos/create', 'TodoController@showCreateForm')->name('todos.create');
+Route::post('/todos/create', 'TodoController@create');
